@@ -1,0 +1,45 @@
+/* Banner Area CSS */
+.banner {
+    padding: 4rem 0;
+
+    @include breakpoint-up(medium) {
+        padding: 5rem 0;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+    }
+
+    &__item {
+        position: relative;
+        flex: 1 1 40rem;
+        height: 25rem;
+        overflow: hidden;
+
+        .banner-image {
+            &:hover {
+                img {
+                    transform: rotate(-5deg) scale(1.15);
+                }
+            }
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+
+            h3 {
+                font-size: 3rem;
+                color: $dark;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+}

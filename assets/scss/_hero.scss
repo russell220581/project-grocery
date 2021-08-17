@@ -1,0 +1,46 @@
+/* Hero Area CSS */
+.hero {
+    padding: 5rem 0;
+
+    @include breakpoint-up(large) {
+        padding: 0;
+    }
+    
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+
+        .hero-image {
+            flex: 1 1 40rem;
+            
+            @include breakpoint-up(large) {
+                padding: 6rem 0 0;
+            }
+        }
+
+        .hero-content {
+            flex: 1 1 40rem;
+            text-align: center;
+
+            @include breakpoint-up(large) {
+                text-align: initial;
+            }
+
+            span {
+                color: $gray;
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            h3 {
+                color: $dark;
+                font-size: 5rem;
+                font-weight: 800;
+                line-height: 1.2;
+                padding: 1.5rem 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,147 @@
+/* Header Area CSS */
+.header {
+    &__top {
+        background-color: $lite_gray;
+        padding: 1rem 0;
+        
+        .top-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 5rem;
+
+            .logo {
+                color: $dark;
+                font-size: 2.5rem;
+                font-weight: 800;
+
+                i {
+                    color: $primary;
+                    font-size: 3rem;
+                }
+            }
+
+            .search-form {
+                display: flex;
+                align-items: center;
+                height: 4rem;
+
+                @include breakpoint-up(medium) {                    
+                    min-width: 35rem;
+                }
+
+                .search-input {
+                    border: 0.1rem solid $border;
+                    padding: 0.5rem 1rem;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1.6rem;
+                }
+
+                label {
+                    background-color: $primary;
+                    color: $white;
+                    font-size: 1.8rem;                    
+                    width: 6rem;
+                    height: 100%;
+                    line-height: 4rem;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $dark;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom { 
+        position: relative;
+        background-color: $white;
+        padding: 1.5rem 0;
+        box-shadow: $box_shadow;
+
+        .bottom-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #menu-bar {
+                font-size: 2.2rem;
+                border: 0.1rem solid $dark;
+                border-radius: 0.5rem;
+                padding: 0.5rem 0.8rem;
+                cursor: pointer;
+                display: none;
+
+                @include breakpoint-down(medium) {
+                    display: block;
+                }
+            }
+
+            .navbar {
+                a {
+                    color: $dark;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    padding: 0.4rem 1.5rem;
+
+                    &:hover {
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+
+                @include breakpoint-down(medium) {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: $dark;
+                    display: flex;
+                    flex-flow: column;
+                    width: 100%;
+                    padding: 2rem 0;
+                    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+                    a {
+                        background-color: $white;
+                        padding: 1rem 0;
+                        margin: 1rem 7.5%;
+                        text-align: center;
+                        border-radius: 0.5rem;
+
+                        @include breakpoint-down(small) {
+                            margin: 0.7rem 1.5rem;
+                        }
+                    }
+
+                    &.active {
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                    }
+                }
+            }
+
+            .icons {
+                a {
+                    color: $dark;
+                    font-size: 2.5rem;
+                    margin-left: 1.5rem;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        &.sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+    }
+}

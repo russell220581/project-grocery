@@ -1,0 +1,9 @@
+/* Contact Area CSS */
+.contact {
+    padding: 6rem 0;
+
+    &__wrap {
+       border: 0.1rem solid $dark_shadow;
+       padding: 3rem 2rem;
+    }
+}

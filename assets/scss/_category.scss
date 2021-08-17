@@ -1,0 +1,21 @@
+/* Category Area CSS */
+.category {
+    padding: 3rem 0;
+
+    &__item {
+        border: 0.1rem solid $dark_shadow;
+        padding: 3rem 2rem;
+        text-align: center;
+        
+        h3 {
+            color: $dark;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 2rem;
+            color: $gray;
+        }
+    }
+}

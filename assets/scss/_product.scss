@@ -1,0 +1,107 @@
+/* Product Area CSS */
+.product {
+    padding-bottom: 6rem;
+
+    &__item {
+        position: relative;
+        border: 0.1rem solid $dark_shadow;
+        padding: 3rem 2rem;
+        text-align: center;
+        overflow: hidden;
+
+        .discount {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            background-color: $lite_primary;
+            color: $primary;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+
+        }
+
+        .icons {
+            position: absolute;
+            top: 2rem;
+            right: -5rem;
+                        
+            a {
+                display: block;
+                background-color: $icon_bg;
+                color: $dark;
+                font-size: 1.7rem;
+                width: 4.5rem;
+                height: 4.5rem;
+                line-height: 4.5rem;
+                border-radius: 50%;
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+
+                &:hover {
+                    background-color: $primary;
+                    color: $white;
+                }
+                
+            }
+        }
+
+        img {
+            max-height: 24rem;
+            transform: scale(0.7);
+        }
+
+        h3 {
+            color: $dark;
+            font-size: 2.6rem;
+            font-weight: 800;
+            padding-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .stars {
+            font-size: 1.8rem;
+            color: $star;
+        }
+
+        .price {
+            color: $dark;
+            padding: 1rem 0;
+            font-size: 2rem;
+
+            span {
+                color: $gray;
+                font-size: 1.6rem;
+                text-decoration: line-through;
+                margin-left: 0.5rem;
+            }
+        }
+
+        .quantity {
+            font-size: 1.7rem;
+            color: $dark;
+            margin-bottom: 0.5rem;
+
+            input {
+                border: 0.1rem solid $dark_shadow;
+                width: 5rem;
+                padding: 0.5rem;
+                margin: 0 0.5rem;
+                color: $dark;
+                font-size: 1.7rem;
+                font-weight: 700;
+            }
+        }
+
+        a {
+            width: 100%;
+        }
+
+        &:hover {
+            .icons {
+                right: 2rem;
+            }
+        }
+    }
+}

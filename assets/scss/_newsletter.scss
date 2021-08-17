@@ -1,0 +1,47 @@
+/* Newletter Area CSS */
+.newsletter {
+    background-image: url(../images/newsletter-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+    overflow: hidden;
+
+    &__form {
+        max-width: 60rem;
+        margin: 0 auto;
+
+        h3 {
+            color: $dark;
+            font-size: 2.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        form {
+            display: flex;
+            align-items: center;         
+            background: $shadow;
+            padding: 1.5rem;
+            margin: 2rem 0 0;
+            
+            .newsletter-input {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                font-size: 1.6rem;
+                text-transform: none;
+
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+            }
+
+            .btn {
+                margin-top: 0;
+            }
+        }
+
+        
+    }
+}

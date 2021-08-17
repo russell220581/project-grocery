@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 200ms linear;
+
+    &::selection {
+        background-color: $primary;
+        color: $white;
+    }
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+    overflow-x: hidden;
+
+    @include breakpoint-down(medium) {
+        font-size: 55%;
+    }
+
+    @include breakpoint-down(small) {
+        font-size: 50%;
+    }
+}
+
+body {    
+    color: $dark2;
+}
+
+.container {
+    width: 85%;
+    max-width: 140rem;
+    margin: 0 auto;
+
+    @include breakpoint-down(small) {
+        width: 100%;
+        padding: 0 2rem;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+p {
+    line-height: 1.5;
+    padding: 0.5rem 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: $primary;
+    color: $white;
+    font-size: 1.7rem;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+
+    &:hover {
+        background-color: $dark;
+    }
+}
+
+.section {
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+        color: $dark;
+        font-size: 3.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        span {
+            color: $primary;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-gap: 2.5rem;
+    align-items: center;
+
+    &.grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    }
+
+    &.grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    }
+}
+
+form {
+    .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.5rem;  
+        
+        .form-control {
+            flex: 1 1 30rem;
+        }
+    }
+    
+    .form-control {
+        border: 0.1rem solid $dark_shadow;
+        background-color: $off_white;
+        font-size: 1.6rem;
+        padding: 1rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        text-transform: none;
+
+        &::placeholder {
+            text-transform: capitalize;
+        }
+
+        &:focus {
+            border: 0.1rem solid $primary;
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: 20rem;
+    }
+
+    input[type="submit"] {
+        display: inline-block;
+        background-color: $primary;
+        color: $white;
+        font-size: 1.7rem;
+        padding: 0.8rem 3rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $dark;
+        }
+    }
+}
+
